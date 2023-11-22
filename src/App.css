@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+:root {
+  --background-color-dark: #722631;
+  --background-color-medium: rgba(167,77,96,0.6);
+  --background-color-light: #dddddd;
+  --color-for-dark: #aaaaaa;
+  --color-for-medium: rgba(167,77,96,0.9);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  border: 1px solid black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#body-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--background-color-light);
 }
 
-.App-link {
-  color: #61dafb;
+.instructions {
+  width: 70%;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--background-color-dark);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#editor-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+#editor {
+  background-color: var(--background-color-medium);
+}
+
+#preview-div {
+  width: 70%;
+}
+
+.div-title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: var(--background-color-dark);
+  color: var(--color-for-dark);
+}
+
+#preview {
+  border: 2px solid black;
+  padding: 5px;
+  background-color: var(--background-color-medium);
+}
+
