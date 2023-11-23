@@ -14,14 +14,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: replaceCarriageReturn(defaultText)
+      text: defaultText
     }
     this.handleText = this.handleText.bind(this);
   }
 
   handleText(event) {
     this.setState(
-      {text: replaceCarriageReturn(event.target.value)}
+      {text: event.target.value}
     );
   }
 
@@ -35,7 +35,7 @@ class App extends React.Component {
         </div>
         <div id="preview-div">
           <div id="preview-title" className="div-title">Preview</div>
-          <div id="preview" dangerouslySetInnerHTML={{__html: parse(this.state.text)}}>
+          <div id="preview" dangerouslySetInnerHTML={{__html: parse(replaceCarriageReturn(this.state.text))}}>
           </div>
         </div>
       </div>
