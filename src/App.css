@@ -8,39 +8,43 @@
 
 * {
   box-sizing: border-box;
-  border: 1px solid black;
 }
 
-#body-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+html {
   background-color: var(--background-color-light);
 }
 
-.instructions {
-  width: 70%;
-  font-weight: 500;
-  font-size: 20px;
-  color: var(--background-color-dark);
-}
-
+#body-div, 
 #editor-div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#editor {
+.instructions {
+  width: 80%;
+  padding: 5px;
+  border: 2px solid;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--background-color-dark);
+}
+
+#editor,
+#preview {
   background-color: var(--background-color-medium);
+  border: 2px solid var(--background-color-dark);
+  padding: 5px;
 }
 
 #preview-div {
-  width: 70%;
+  width: 80%;
+  margin: 20px;
 }
 
 .div-title {
   width: 100%;
+  padding: 3px;
   text-align: center;
   font-weight: bold;
   font-size: 24px;
@@ -48,9 +52,4 @@
   color: var(--color-for-dark);
 }
 
-#preview {
-  border: 2px solid black;
-  padding: 5px;
-  background-color: var(--background-color-medium);
-}
 
